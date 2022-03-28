@@ -1,0 +1,261 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.6rem;
+	color: #000;
+	background-color: #fff;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.nav {
+	&__box {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+	}
+
+	&__logo-box {
+		display: block;
+		justify-content: center;
+	}
+}
+
+// HEADER
+.header {
+	&__hero-img {
+		position: relative;
+		height: 50vh;
+		background-image: url('/dist/img/hero-small.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		filter: sepia(1);
+
+		&-shadow {
+			background-color: rgba($color: #000000, $alpha: 0.5);
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__text {
+		color: #fff;
+		font-size: 3rem;
+		font-weight: 200;
+		border: 1px solid #85a182;
+		border-radius: 8px;
+		text-transform: uppercase;
+		text-align: center;
+		word-spacing: 10px;
+	}
+}
+
+// MAIN
+.main {
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		.findus {
+			margin: 2em;
+			font-weight: 700;
+			font-size: 3rem;
+			text-align: center;
+		}
+		.contact {
+			font-size: 2rem;
+			text-align: center;
+			margin: 1em 0;
+		}
+		.contact-title {
+			font-size: 2.5rem;
+		}
+		.titleHr {
+			width: 30%;
+			margin: 0 auto;
+		}
+	}
+
+	&__box {
+		height: 550px;
+		text-align: center;
+		width: 100%;
+		.map {
+			height: 100%;
+			width: 100%;
+			border: 0;
+		}
+	}
+
+	&__hero-img {
+		background-image: url('../../dist/img/main-small.jpg');
+		width: 100%;
+		height: 40vh;
+		.main__titleh2 {
+			padding: .8em 0.3em;
+		}
+	}
+	&__cardLink {
+		text-decoration: none;
+		display: none;
+		margin-top: 1em;
+		color: #c9b38b;
+	}
+
+	.offer {
+		&__title {
+			text-align: center;
+			margin-top: 2em;
+			font-weight: 700;
+			font-size: 3rem;
+		}
+		.cards {
+			display: flex;
+			margin: 3em 0;
+			flex-wrap: wrap;
+			justify-content: center;
+
+		}
+
+		.card {
+			position: relative;
+			margin: 10px;
+			height: 400px;
+			width: 100%;
+			text-align: center;
+			background-position: center;
+			background-size: cover;
+			border-radius: 15px;
+			box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.7);
+			overflow: hidden;
+			background-position: left;
+		}
+
+		.one {
+			background-image: url('../../dist/img/clio1.jpg');
+		}
+
+		.two {
+			background-image: url('../../dist/img/Kia.jpg');
+		}
+		.three {
+			background-image: url('../../dist/img/toyota.jpg');
+		}
+		.four {
+			background-image: url('../../dist/img/ford.jpg');
+		}
+
+		.card-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			padding: 10px;
+			background: none;
+			border: none;
+			color: #c9b38b;
+			font-size: 46px;
+			text-shadow: 5px 5px 5px rgb(0, 0, 0);
+			cursor: pointer;
+			z-index: 10;
+		}
+
+		button:hover ~ .text {
+			clip-path: circle(120% at 50% 90%);
+		}
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 80px 30px;
+			background-color: rgba($color: #000000, $alpha: 0.85);
+			color: #fff;
+			clip-path: circle(0% at 50% 80%);
+			transition: clip-path 0.8s;
+		}
+
+		h1 {
+			color: rgb(182, 179, 97);
+		}
+
+		h2 {
+			margin-bottom: 30px;
+			color: #b19157;
+		}
+
+		.more {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			cursor: pointer;
+			border: none;
+			box-shadow: 0 4px 2px -2px #c9b38b;
+			padding: 0.5em 2em;
+			font-size: 1.7rem;
+			border-radius: 8px;
+			transition: 0.5s;
+
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+		.more:hover {
+			background-color: #c9b38b;
+		}
+	}
+}
+
+// FOTTER
+
+.footer {
+	hr {
+		margin-top: 1em;
+	}
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		p {
+			margin: 2em 1em;
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
+}
+
+// MEDIA
+
+@import './small';
+@import './medium';
+@import './large';

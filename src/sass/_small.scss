@@ -1,0 +1,43 @@
+@media (min-width: 576px) {
+	.header {
+		height: 100%;
+		&__text {
+			font-size: 3.6rem;
+			padding: 0;
+		}
+	}
+	.main {
+		&__boxes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-transform: uppercase;
+			.findus {
+				margin-top: 2em;
+				font-weight: 700;
+				font-size: 3rem;
+				text-align: center;
+			}
+		}
+		&__box {
+			margin-top: 2em;
+			height: 550px;
+			text-align: center;
+			width: 100%;
+			.map {
+				height: 100%;
+				width: 100%;
+				border: 0;
+			}
+			margin-bottom: 1em;
+		}
+
+		&__hero-img {
+			.main__titleh2 {
+				padding: 1em 0.5em;
+				font-size: 2.5rem;
+			}
+		}
+	}
+}

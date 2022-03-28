@@ -1,0 +1,34 @@
+@media (min-width: 992px) {
+	.header {
+		&__text {
+			font-size: 6rem;
+			padding: 1em .5em;
+		}
+		&__hero-img {
+			background-image: url('/dist/img/hero-big.jpg');
+		}
+	}
+
+	.main {
+		// pozycjonowanie kart na PC
+		.offer {
+			.cards {
+				flex-wrap: wrap;
+				// &:last-child{
+				// 	justify-content: flex-end;
+				// }
+				.card {
+					width: 40%;
+					margin: 1em 1em;
+				}
+			}
+		}
+		&__hero-img {
+			background-image: url('../../dist/img/main-big.jpg');
+		}
+
+		&__cardLink {
+			display: none;
+		}
+	}
+}
